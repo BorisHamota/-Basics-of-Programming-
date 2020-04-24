@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int len; char temp;
+    cin >> len;
+    cin.ignore();
+    char* str = new char[len++];
+    cin.getline(str, len);
+    cout << "Inverse string: ";
+
+    for (int i = 0; i < len / 2; i++) {
+        temp = str[len - i - 2];
+        str[len - i - 2] = str[i];
+        str[i] = temp;
+    }
+}
